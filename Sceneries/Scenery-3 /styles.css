@@ -1,0 +1,215 @@
+*{
+    box-sizing: border-box;
+}
+*::selection {
+    color: #fff;
+}
+body {
+    display: flex;
+    overflow: hidden;
+    margin: 0; padding: 0;
+    background-color: #060a16;
+    min-height: 100vh; min-width: 100vw;
+    align-items: center; justify-content: center;
+}
+*, ::before, ::after {
+    content: ''; position: absolute;
+}
+                   /*Mountain*/
+.mountain {
+    top: 177px;
+    width: 0; height: 0;
+    border: 295px solid #13232e;
+    border-top: 200px solid transparent;
+    border-left: 190px solid transparent;
+    border-right: 200px solid transparent;
+}                   /*Moon*/
+.mountain::after {
+    border-radius: 50%;
+    background-color: #fff;
+    width: 350px; height: 350px;
+    z-index: -99; margin: -200px -170px;
+    box-shadow: inset #999 10px -5px 10px 0, 
+                inset #777 -8px 5px 10px 0, 
+                inset #c4c4c4 -50px 0 100px 0,
+                inset #999 20px -5px 100px 0;
+}
+.mountain::before {
+    overflow: hidden;
+    margin: -100px -100px;
+    background-color: #000;
+    width: 100px; height: 90px;
+    opacity: 30%; filter: blur(10px);
+    border-radius: 90% 100% 70% 100%;
+    box-shadow: -50px -40px 30px 0,
+                 60px 70px 10px 0,
+                 -10px 100px 0,
+                 -20px -100px 0,
+                 -40px 60px 0 -10px;
+} 
+.shine {
+    background-color: #ddd;
+    width: 10px; height: 10px;
+    border-radius: 50%; filter: blur(5px);
+    animation: glow 5s linear infinite alternate;
+    box-shadow: #fff 150px 50px, #fff -100px -20px,
+                #fff 40px -140px, #fff -70px -100px,
+                #fff -145px 100px;
+}
+@keyframes glow {
+    50% { filter: blur(20px);
+         width: 50px; height: 40px; }
+    60% { opacity: 10%, 90%, 100%, 40%; }
+    80% { opacity: 83%, 38%, 29%, 37%, 49%; }
+    100% { opacity: 48%, 49%, 100%, 48%; }
+}
+                    /*Ninja*/
+.face {
+    border-radius: 50%;
+    background-color: #000;
+    top: 290px; left: 180px;
+    width: 25px; height: 30px;
+}                    /*Mask*/
+.face::after {
+    top: 6px;
+    background-color: #fae7d0;
+    width: 25px; height: 8px;
+    border-radius: 100% 100% 0 0;
+}                    /*Eye*/
+.face::before {
+    box-shadow: 10px 0;
+    top: 10px; z-index: 99; 
+    background-color: #000;
+    width: 5px; height: 2px;
+    border-radius: 50px; left: 4px;
+    animation: saw 2s linear infinite alternate;
+}        
+@keyframes saw {
+    50% { left: 2px; }
+    100% { left: 5px; }
+}
+div{
+    display: flex;
+    align-items: center; justify-content: center;
+}
+                     /*Neck*/
+.neck {
+    top: 320px; left: 189px;
+    background-color: #fae7d0;
+    width: 6px; height: 3px;
+}                    /*Body*/
+.neck::after {
+    border-radius: 4px;
+    left: -9px; top: 2px;
+    background-color: #000;
+    width: 25px; height: 25px;
+}                  /*Cloth*/          
+.neck::before {
+    border-radius: 5px;
+    background-color: #9b111e;
+    transform: rotate(-30deg);
+    width: 30px; height: 50px;
+    z-index: -99; top: 2px; left: 1px;
+    animation: fly 1.2s linear infinite alternate;
+}
+@keyframes fly {
+    to { transform: rotate(-50deg); }
+}
+                     /*Legs*/
+.legs {
+    border-radius: 2px;
+    background-color: #000;
+    top: 345px; left: 184px;
+    width: 9px; height: 33px;
+}
+.legs::after {
+    border-radius: 2px;
+    background-color: #000;
+    right: -15px; top: -5px;
+    width: 9px; height: 25px;
+    transform: rotate(-50deg);
+}
+.legs::before {
+    right: -15px; top: 7px;
+    background-color: #000;
+    transform: rotate(40deg);
+    width: 9px; height: 25px;
+}    
+                    /*Hands*/
+.hands {
+    background-color: #000;
+    box-shadow: 27px -18px;
+    left: 175px; top: 323px;
+    transform: rotate(50deg);
+    width: 4px; height: 15px;
+}
+.hands::after {
+    top: 5px; left: 6px;
+    box-shadow: 25px 20px;
+    background-color: #000;
+    width: 4px; height: 15px;
+    transform: rotate(-100deg);
+}
+                    /*Stars*/
+p {
+    color: #fff; font-size: 8px;
+}
+.star-1 {
+    top: 10px; right: 100px;
+    text-shadow: 100px 30px;
+    animation: blink 0.2s linear infinite alternate;
+}
+.star-2 {
+    top: 100px; right: 200px;
+    text-shadow: -100px 3px;
+    transform: rotate(74deg);
+    animation: blink 0.4s linear infinite alternate;
+}
+.star-3 {
+    top: 50px; left: 100px;
+    animation: blink 0.6s linear infinite alternate;
+}
+.star-4 {
+    top: 140px; left: 10px;
+    animation: blink 0.8s linear infinite alternate;
+}
+.star-5 {
+    top: 150px; right: 18px;
+    animation: blink 1s linear infinite alternate;
+}
+.star-6 {
+    top: 40px; right: 50px;
+    transform: rotate(10deg);
+    animation: blink 2s linear infinite alternate;
+}
+.star-7 {
+    top: 90px; right: 120px;
+    animation: blink 0.5s linear infinite alternate;
+}
+.star-8 {
+    top: 74px; left: 30px;
+    transform: rotate(30deg);
+    animation: blink 0.4s linear infinite alternate;
+}
+.star-9 {
+    top: 240px; left: 10px;
+    animation: blink 0.7s linear infinite alternate;
+}
+.star-10 {
+    top: 300px; right: 10px;
+    text-shadow: -380px 100px;
+    animation: blink 1.3s linear infinite alternate;
+}
+@keyframes blink{
+      0%,1%,5%,10%,15%,30%{ opacity:40%; }
+      30%,29%,8%,132%,20%{ opacity:1;}
+}
+                   /*Clouds*/
+.clouds {
+    border-radius: 50%;
+    filter: blur(20px);
+    background-color: #fff;
+    top: 600px; left: -30px;
+    width: 300px; height: 20px;
+    box-shadow: #fff 200px -100px 0 -5px;
+}

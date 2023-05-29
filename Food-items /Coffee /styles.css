@@ -1,13 +1,15 @@
 body {
     background-color: #6f4e37;
-}                                            /*Text*/
+}                                           
+           /*Text*/
 h2 {
     color: #fff;
     font-size: 30px;
     margin: 150px 0;
     text-align: right;
     font-family: 'Noto Serif', serif;
-}                                            /*Plate*/
+}                                            
+         /*Plate*/
 .plate {
     width: 200px;
     height: 30px;
@@ -16,7 +18,8 @@ h2 {
     background-color: #c4c4c4;
     border: 2px solid transparent;
     box-shadow: inset #fff -100px 0 0 0, #442814 -10px 5px 2px 0;
-}                                         /*Cup Base*/
+}                                         
+         /*Cup Base*/
 .cup {
     width: 130px;
     height: 110px;
@@ -24,7 +27,8 @@ h2 {
     background-color: #f5f5f5;
     border-radius: 30px 30px 100px 100px;
     box-shadow: #ddd inset 30px 10px 0 0;
-}                                           /*Handle*/
+}                                           
+           /*Handle*/
 .cup::before {
     content:'';
     width: 20px;
@@ -34,7 +38,8 @@ h2 {
     border: 10px solid #f5f5f5;
     border-radius: 0 50px 50px 0;
     box-shadow: inset #ddd -5px -5px 0 0;
-}                                          /*Cup Top*/
+}                                          
+           /*Cup Top*/
 .coffee {
     width: 125px;
     height: 40px;
@@ -43,7 +48,8 @@ h2 {
     background-color: #f5f5f5;
     border: 2px solid transparent;
     box-shadow: inset #ddd -10px -10px 0 0;
-}                                           /*Coffee*/
+}                                           
+           /*Coffee*/
 .coffee::after {
     content:'';
     width: 110px;
@@ -53,7 +59,8 @@ h2 {
     border-radius:100%;
     background-color: #6f4e37;
     box-shadow: inset #593c1f 10px 10px 0 0;
-}                                           /*Vapour*/
+}                                           
+           /*Vapour*/
 .vapour {
     width: 12px;
     height: 60px;

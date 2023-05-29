@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body {
+    display: flex;
+    min-width: 100vw;
+    min-height: 100vh; 
+    align-items: center; 
+    background-color: #000;
+    justify-content: center;
+    background-attachment: fixed;
+    
+}
+*,::before,::after {
+    content:''; 
+    position: absolute;
+}
+                  /*Container-1*/
+.container-1 {
+    width: 95vw;
+    height: 45vh;
+    z-index: -99;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.container-1::after {    
+    top: 250px;
+    left: 85px;
+    width: 200px;
+    height: 200px;
+    background-color: #ddd;
+    border-radius: 30% 30% 0 0;
+    animation: 2s body alternate infinite;
+    box-shadow: inset #c4c4c4 -10px 6px;
+} 
+@keyframes body {
+    from {
+        box-shadow: inset #c4c4c4 -10px 6px;
+    }
+    to {
+        box-shadow: inset #c4c4c4 -30px 10px;
+    }
+}
+                    /*Face*/
+.face {
+    top: 70px;
+    left: 120px;
+    width: 130px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #aa724b;
+    animation: shdw 2s alternate infinite;
+    box-shadow: inset #935d37 -10px 10px, inset #7b4b2a 5px -1px;
+}
+@keyframes shdw {
+    from {
+        box-shadow: inset #935d37 -10px 10px, inset #7b4b2a 3px -1px;
+    }
+    to {
+        box-shadow: inset #935d37 -20px 20px, inset #7b4b2a 0px 0px;
+    }
+}                   
+                   /*Nose*/
+.face::after {
+    top: 80px;
+    left: 65px;
+    width: 3px; 
+    height: 10px;
+    background-color: #573719;
+}                  /*Nose Blood*/
+.face::before {
+    top: 87px;
+    left: 65px;
+    width: 6px; 
+    z-index: 99;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #d10000;
+    animation: drop 2s linear infinite;
+    box-shadow: inset #a30000 -2px -2px;
+}
+@keyframes drop {
+    10% {
+        top: 87px;
+    }
+    20% {
+        height: 10px;
+    }
+    30% {
+        height: 20px;
+    }
+    100% {
+        top: 230px; 
+        height: 5px;
+    }
+}
+                    /*Eyes*/
+.eye {
+    top: 120px; 
+    left: 200px;
+    width: 30px;
+    height: 20px;
+    background-color: #ff2400;
+    border-radius: 100% 0 100% 0;
+    box-shadow: inset #d10000 3px 3px;
+    animation: black 2s alternate infinite;
+}
+@keyframes black {
+    to {
+        background-color: #000;
+        box-shadow: none;
+    }
+}
+.eye::after {
+    left: -50px;
+    width: 30px;
+    height: 20px;
+    background-color: #ff2400;
+    border-radius: 0 100% 0 100%;
+    box-shadow: inset #d10000 3px 3px;
+    animation: black 2s alternate infinite;
+}                    /*EyeBall*/
+.eye::before {
+    top: 6px; 
+    left: 8px;
+    width: 10px; 
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: inset #ddd -2px 2px;
+    animation: eye 2s alternate infinite;
+}                    
+@keyframes eye {
+    to {
+        background-color: #ff2400;
+        box-shadow: none;
+    }
+}
+                    /*Hair*/
+.hair {
+    top: 60px;
+    left: 110px;
+    z-index: -99;
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; 
+    background-color: #222;
+}
+.hair::after {   
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    background-color: #222;
+    box-shadow: #222 30px -20px, #222 65px -25px, #222 100px -10px, #222 120px 15px, #222 130px 45px, #222 130px 80px, #222 -15px 30px, #222 -20px 60px, #222 -20px 90px;
+}                  /*Neck*/
+.hair::before {
+    top: 160px; 
+    left: 50px;
+    width: 50px;
+    height: 40px;
+    background-color: #aa724b;
+    animation: neck 2s alternate infinite;
+    box-shadow: inset #935d37 -5px 10px;
+}
+@keyframes neck {
+    from {
+        box-shadow: inset #935d37 -5px 10px;
+    }
+    to {
+        box-shadow: inset #935d37 -10px 15px;
+    }
+}
+                  /*EyeBrows*/
+.eyebrow {
+    top: 110px; 
+    width: 35px;
+    height: 7px;
+    left: 145px;
+    border-radius: 50px;
+    background-color: #222;
+    transform: rotate(30deg);
+}
+.eyebrow::after {  
+    left: 40px;
+    top: -25px;
+    width: 35px;
+    height: 7px;
+    border-radius: 50px;
+    background-color: #222;
+    transform: rotate(-60deg);
+}                    /*Hair*/
+.eyebrow::before {
+    top: -35px; 
+    left: -30px;
+    width: 50px; 
+    height: 70px;
+    border-radius: 50%;
+    background-color: #222;
+    box-shadow: #222 20px -30px 0 -3px;
+}                    /*Mouth*/
+.mouth {
+    top: 175px; 
+    left: 145px;
+    width: 80px; 
+    height: 40px;
+    overflow: hidden;
+    background-color: red;
+    border-radius: 0 0 100px 100px;
+    animation: 2s mouth alternate infinite;
+    box-shadow: #d10000 inset -5px -5px 0 0;
+}                    
+@keyframes mouth {
+    from {
+        box-shadow: #d10000 inset -5px -5px 0 0;
+    }
+    to {
+        box-shadow: #d10000 inset -10px 9px 0 0;
+    }
+}
+                    /*Teeth*/
+.mouth::after {
+    width: 0; 
+    height: 0;
+    left: 20px;
+    border: 30px solid #fff;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+.mouth::before {
+    width: 0;
+    top: 5px;
+    height: 0;
+    left: 50px; 
+    border: 30px solid #fff;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
